@@ -14,7 +14,6 @@
 		FC18CEB421182FD6004DEB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC18CEB321182FD6004DEB82 /* Assets.xcassets */; };
 		FC18CEB721182FD6004DEB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC18CEB521182FD6004DEB82 /* LaunchScreen.storyboard */; };
 		FC18CEBA21182FD6004DEB82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEB921182FD6004DEB82 /* main.m */; };
-		FC18CEE02118303B004DEB82 /* MBProgressHUD+MP.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEC32118303B004DEB82 /* MBProgressHUD+MP.m */; };
 		FC18CEE12118303B004DEB82 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEC52118303B004DEB82 /* NSString+Hash.m */; };
 		FC18CEE22118303B004DEB82 /* UIBarButtonItem+DYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEC72118303B004DEB82 /* UIBarButtonItem+DYExtention.m */; };
 		FC18CEE32118303B004DEB82 /* UIButton+DYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEC92118303B004DEB82 /* UIButton+DYButton.m */; };
@@ -29,6 +28,7 @@
 		FC18CEEC2118303B004DEB82 /* DYTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEDC2118303B004DEB82 /* DYTimeHelper.m */; };
 		FC18CEED2118303B004DEB82 /* DYPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEDF2118303B004DEB82 /* DYPlaceHolderTextView.m */; };
 		FC18CEF121184ECA004DEB82 /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC18CEF021184ECA004DEB82 /* Image.bundle */; };
+		FC18CEF521185C93004DEB82 /* DYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CEF421185C93004DEB82 /* DYProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,8 +45,6 @@
 		FC18CEB621182FD6004DEB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC18CEB821182FD6004DEB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC18CEB921182FD6004DEB82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC18CEC22118303B004DEB82 /* MBProgressHUD+MP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MP.h"; sourceTree = "<group>"; };
-		FC18CEC32118303B004DEB82 /* MBProgressHUD+MP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MP.m"; sourceTree = "<group>"; };
 		FC18CEC42118303B004DEB82 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		FC18CEC52118303B004DEB82 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		FC18CEC62118303B004DEB82 /* UIBarButtonItem+DYExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DYExtention.h"; sourceTree = "<group>"; };
@@ -74,6 +72,8 @@
 		FC18CEDE2118303B004DEB82 /* DYPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPlaceHolderTextView.h; sourceTree = "<group>"; };
 		FC18CEDF2118303B004DEB82 /* DYPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPlaceHolderTextView.m; sourceTree = "<group>"; };
 		FC18CEF021184ECA004DEB82 /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
+		FC18CEF321185C92004DEB82 /* DYProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYProgressHUD.h; sourceTree = "<group>"; };
+		FC18CEF421185C93004DEB82 /* DYProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 		FC18CEC12118303B004DEB82 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
-				FC18CEC22118303B004DEB82 /* MBProgressHUD+MP.h */,
-				FC18CEC32118303B004DEB82 /* MBProgressHUD+MP.m */,
+				FC18CEF321185C92004DEB82 /* DYProgressHUD.h */,
+				FC18CEF421185C93004DEB82 /* DYProgressHUD.m */,
 				FC18CEC42118303B004DEB82 /* NSString+Hash.h */,
 				FC18CEC52118303B004DEB82 /* NSString+Hash.m */,
 				FC18CEC62118303B004DEB82 /* UIBarButtonItem+DYExtention.h */,
@@ -306,11 +306,11 @@
 				FC18CEE72118303B004DEB82 /* UIView+DYExtention.m in Sources */,
 				FC18CEE42118303B004DEB82 /* UIColor+DYExtension.m in Sources */,
 				FC18CEE52118303B004DEB82 /* UIImage+DYExtention.m in Sources */,
+				FC18CEF521185C93004DEB82 /* DYProgressHUD.m in Sources */,
 				FC18CEED2118303B004DEB82 /* DYPlaceHolderTextView.m in Sources */,
 				FC18CEEC2118303B004DEB82 /* DYTimeHelper.m in Sources */,
 				FC18CEBA21182FD6004DEB82 /* main.m in Sources */,
 				FC18CEEB2118303B004DEB82 /* DYCellAutoHeightHelper.m in Sources */,
-				FC18CEE02118303B004DEB82 /* MBProgressHUD+MP.m in Sources */,
 				FC18CEE62118303B004DEB82 /* UIImage+RoundedCorner.m in Sources */,
 				FC18CEEA2118303B004DEB82 /* DYAlertViewHelper.m in Sources */,
 				FC18CEE12118303B004DEB82 /* NSString+Hash.m in Sources */,

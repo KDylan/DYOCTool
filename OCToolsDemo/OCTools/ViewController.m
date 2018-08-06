@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "MBProgressHUD+MP.h"
+#import "DYProgressHUD.h"
+
 @interface ViewController ()
 
 @end
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [MBProgressHUD showSuccess:@"asfafafafafaaf" ToView:self.view];
+    [DYProgressHUD showSuccess:@"asfafafafafaaf" ToView:self.view];
 }
 
 

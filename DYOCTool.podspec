@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/UEdge/DYOCTool'
     # LICENSE信息，这里是Apache;有的是MIT，换成MIT就OK了
     s.license          = { :type => 'Apache', :file => 'LICENSE' }
-    s.author           = { '<作者名称>' => '<邮箱地址>' }
+    s.author           = { 'Dylan.Kuang' => 'leonsongfeng@gmail.com' }
     # 仓库地址
     s.source           = { :git => 'https://github.com/UEdge/DYOCTool.git', :tag => s.version.to_s }
     
@@ -27,5 +27,5 @@ Pod::Spec.new do |s|
     # 第三方依赖库，多个的话在后面加逗号隔开
     s.dependency 'MBProgressHUD', '~> 1.1.0'
     # 强烈建议加上这句，取出警告
-    s.pod_target_xcconfig = { 'SWIFT_SUPPRESS_WARNINGS' => 'YES' } 
+    # s.pod_target_xcconfig = { '-Objc_SUPPRESS_WARNINGS' => 'YES' } 
 end

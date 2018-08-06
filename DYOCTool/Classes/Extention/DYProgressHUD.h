@@ -14,11 +14,15 @@
 //  Copyright © 2016年 wujunyang. All rights reserved.
 //
 
+//  Created by Dylan on 2018/8/6.
+//  Copyright © 2018年 Dylan. All rights reserved.
+//
+
 #import <Foundation/Foundation.h>
 
 #import "MBProgressHUD.h"
 
-@interface MBProgressHUD (MP)
+@interface DYProgressHUD : MBProgressHUD
 
 
 /**
@@ -110,8 +114,4 @@
  @param view view
  */
 + (void)hideHUDForView:(UIView *)view;
-/**
- 隐藏一个view
- */
-//+ (void)hideHUD;
 @end
