@@ -19,11 +19,11 @@
  @param error error
  @param view view
  */
-+ (void)showError:(NSString *)error ToView:(UIView *)view{
++ (void)showError:(NSString *)error{
     
     //    [self showCustomIcon:@"MBHUD_Error" Title:error ToView:view];
     
-    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Error@2x"] Title:error ToView:view];
+    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Error@2x"] Title:error ];
     
 }
 
@@ -33,9 +33,9 @@
  @param success success
  @param view view
  */
-+ (void)showSuccess:(NSString *)success ToView:(UIView *)view
++ (void)showSuccess:(NSString *)success
 {
-    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Success@2x"] Title:success ToView:view];
+    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Success@2x"] Title:success];
 }
 
 /**
@@ -44,9 +44,9 @@
  @param Info Info
  @param view view
  */
-+ (void)showInfo:(NSString *)Info ToView:(UIView *)view
++ (void)showInfo:(NSString *)Info
 {
-    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Info@2x"] Title:Info ToView:view];
+    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Info@2x"] Title:Info ];
 }
 
 
@@ -56,9 +56,9 @@
  @param Warn Warn
  @param view view
  */
-+ (void)showWarn:(NSString *)Warn ToView:(UIView *)view
++ (void)showWarn:(NSString *)Warn
 {
-    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Warn@@2x"] Title:Warn ToView:view];
+    [self showCustomIcon:[UIImage imageNamed:@"Image.bundle/MBHUD_Warn@@2x"] Title:Warn ];
 }
 
 #pragma mark 显示一些信息
@@ -70,9 +70,9 @@
  @param message message
  @param view view
  */
-+ (void)showAutoMessage:(NSString *)message ToView:(UIView *)view{
++ (void)showAutoMessage:(NSString *)message {
     
-    [self showMessage:message ToView:view RemainTime:2.0 Model:MBProgressHUDModeText];
+    [self showMessage:message  RemainTime:2.0 Model:MBProgressHUDModeText];
 }
 
 /**
@@ -80,9 +80,9 @@
  
  @param message message
  */
-+ (void)showLoadToView:(NSString *)message ToView:(UIView *)view{
++ (void)showLoadToView:(NSString *)message {
     
-    [self showIconMessage:message ToView:view RemainTime:0];
+    [self showIconMessage:message  RemainTime:0];
     
 }
 
@@ -93,9 +93,9 @@
  @param view view
  @param time time
  */
-+(void)showIconMessage:(NSString *)message ToView:(UIView *)view RemainTime:(CGFloat)time{
++(void)showIconMessage:(NSString *)message RemainTime:(CGFloat)time{
     
-    [self showMessage:message ToView:view RemainTime:time Model:MBProgressHUDModeIndeterminate];
+    [self showMessage:message RemainTime:time Model:MBProgressHUDModeIndeterminate];
 }
 
 /**
@@ -105,9 +105,9 @@
  @param view view
  @param time time
  */
-+(void)showMessage:(NSString *)message ToView:(UIView *)view RemainTime:(CGFloat)time{
++(void)showMessage:(NSString *)message  RemainTime:(CGFloat)time{
     
-    [self showMessage:message ToView:view RemainTime:time Model:MBProgressHUDModeText];
+    [self showMessage:message RemainTime:time Model:MBProgressHUDModeText];
 }
 
 
@@ -119,14 +119,12 @@
  @param time 隐藏时间
  @param model hud类型
  */
-+(void)showMessage:(NSString *)message ToView:(UIView *)view RemainTime:(CGFloat)time Model:(MBProgressHUDMode)model{
++(void)showMessage:(NSString *)message  RemainTime:(CGFloat)time Model:(MBProgressHUDMode)model{
     
-    [self hideHUDForView:view];
-    
-    if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
+     [self hideHud];
     
     // 快速显示一个提示信息
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[self showHudView] animated:YES];
     //模式
     hud.mode = model;
     
@@ -161,13 +159,12 @@
  @param title 显示信息
  @param view view
  */
-+ (void)showCustomIcon:(UIImage *)image Title:(NSString *)title ToView:(UIView *)view
++ (void)showCustomIcon:(UIImage *)image Title:(NSString *)title
 {
-    [self hideHUDForView:view];
-    
-    if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
+    [self hideHud];
+  
     // 快速显示一个提示信息
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[self showHudView] animated:YES];
     
     // 再设置模式
     hud.mode = MBProgressHUDModeCustomView;
@@ -199,11 +196,20 @@
  
  @param view view
  */
-+ (void)hideHUDForView:(UIView *)view
++ (void)hideHud
 {
-    if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
+    [MBProgressHUD hideHUDForView:[self showHudView] animated:YES];
+
+}
+
+/**
+ 提供一個Windows
+
+ @return suiView
+ */
++(UIView *)showHudView{
     
-    [self hideHUDForView:view animated:YES];
+    return (UIView*)[UIApplication sharedApplication].delegate.window;
 }
 
 @end

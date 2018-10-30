@@ -30,7 +30,7 @@
  @param error error
  @param view view
  */
-+ (void)showError:(NSString *)error ToView:(UIView *)view;
++ (void)showError:(NSString *)error;
 
 /**
  显示成功消息,带图
@@ -38,7 +38,7 @@
  @param success success
  @param view view
  */
-+ (void)showSuccess:(NSString *)success ToView:(UIView *)view;
++ (void)showSuccess:(NSString *)success ;
 
 /**
  显示普通消息带图
@@ -46,7 +46,7 @@
  @param Info Info
  @param view view
  */
-+ (void)showInfo:(NSString *)Info ToView:(UIView *)view;
++ (void)showInfo:(NSString *)Info;
 
 /**
  显示警告消息，带图
@@ -54,7 +54,7 @@
  @param Warn Warn
  @param view view
  */
-+ (void)showWarn:(NSString *)Warn ToView:(UIView *)view;
++ (void)showWarn:(NSString *)Warn;
 
 #pragma mark 显示一些信息
 
@@ -64,13 +64,13 @@
  @param message message
  @param view view
  */
-+ (void)showAutoMessage:(NSString *)message ToView:(UIView *)view;
++ (void)showAutoMessage:(NSString *)message ;
 /**
  显示菊花，不自动消失
  
  @param message message
  */
-+ (void)showLoadToView:(NSString *)message ToView:(UIView *)view;
++ (void)showLoadToView:(NSString *)message;
 
 /**
  自定义停留时间，有图【显示菊花】
@@ -79,7 +79,7 @@
  @param view view
  @param time time
  */
-+(void)showIconMessage:(NSString *)message ToView:(UIView *)view RemainTime:(CGFloat)time;
++(void)showIconMessage:(NSString *)message  RemainTime:(CGFloat)time;
 
 /**
  自定义停留时间，无图
@@ -88,7 +88,7 @@
  @param view view
  @param time time
  */
-+(void)showMessage:(NSString *)message ToView:(UIView *)view RemainTime:(CGFloat)time;
++(void)showMessage:(NSString *)message RemainTime:(CGFloat)time;
 
 /**
  显示不带图片的信息
@@ -98,7 +98,7 @@
  @param time 隐藏时间
  @param model hud类型
  */
-+(void)showMessage:(NSString *)message ToView:(UIView *)view RemainTime:(CGFloat)time Model:(MBProgressHUDMode)model;
++(void)showMessage:(NSString *)message RemainTime:(CGFloat)time Model:(MBProgressHUDMode)model;
 /**
  显示带图片的信息
  
@@ -106,11 +106,12 @@
  @param title 显示信息
  @param view view
  */
-+ (void)showCustomIcon:(UIImage *)image Title:(NSString *)title ToView:(UIView *)view;
++ (void)showCustomIcon:(UIImage *)image Title:(NSString *)title ;
 /**
  隐藏一个view【自己输入view】
  
  @param view view
  */
-+ (void)hideHUDForView:(UIView *)view;
++ (void)hideHud;
+
 @end
