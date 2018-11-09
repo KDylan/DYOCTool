@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'DYOCTool'
-    s.version          = '0.1.3'
+    s.version          = '0.1.5'
     s.summary          = '自己使用的一些工具类'
     #使用arc
     s.requires_arc = true
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
      
      s.resources = "DYOCTool/Resources/Image.bundle"
 
-    s.dependency 'MBProgressHUD', '~> 1.1.0'
+     s.dependency 'MBProgressHUD', '~> 1.1.0'
 
     #s.pod_target_xcconfig = { 'SWIFT_SUPPRESS_WARNINGS' => 'YES' }
     
